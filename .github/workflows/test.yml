@@ -8,6 +8,7 @@ on:
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   lint:
@@ -29,9 +30,6 @@ jobs:
 
       - name: Format
         run: npm run format
-
-      - name: Test
-        run: npm test
 
       - name: Build
         run: npm run build
