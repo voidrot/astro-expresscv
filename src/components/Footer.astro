@@ -1,0 +1,28 @@
+---
+import config from "../config.json"
+
+const fromYear = config.footer.copyright.fromYear
+const currentYear = new Date().getFullYear()
+const copyrightName = config.footer.copyright.name
+
+const yearText =
+  fromYear === currentYear ? currentYear : `${fromYear} - ${currentYear}`
+const supportText = config.footer.showSupportText
+---
+
+<footer class="text-center">
+  <div class="text-center text-surface">
+    &copy; Copyright {yearText}
+    {copyrightName}
+    {
+      supportText && (
+        <div class="text-sm p-2">
+          Built with{" "}
+          <a href="https://github.com/voidrot/astro-expresscv">
+            ExpressCV Theme
+          </a>
+        </div>
+      )
+    }
+  </div>
+</footer>
