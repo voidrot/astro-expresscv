@@ -12,15 +12,20 @@ import tailwind from "@astrojs/tailwind";
 // https://astro.build/config
 export default defineConfig({
   site: process.env.ASTRO_SITE || "http://localhost:4321",
-  integrations: [sitemap(), mdx(), tailwind(), robotsTxt({
-    sitemap: true,
-    host: process.env.ASTRO_SITE || "http://localhost:4321",
-    policy: [
-      {
-        userAgent: "*",
-        allow: "/",
-        crawlDelay: 10
-      }
-    ]
-  })]
+  integrations: [
+    sitemap(),
+    mdx(),
+    tailwind(),
+    robotsTxt({
+      sitemap: true,
+      host: process.env.ASTRO_SITE || "http://localhost:4321",
+      policy: [
+        {
+          userAgent: "*",
+          allow: "/",
+          crawlDelay: 10,
+        },
+      ],
+    }),
+  ],
 });
