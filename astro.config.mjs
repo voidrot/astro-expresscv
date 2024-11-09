@@ -18,7 +18,6 @@ export default defineConfig({
     tailwind(),
     robotsTxt({
       sitemap: true,
-      host: process.env.ASTRO_SITE || "http://localhost:4321",
       policy: [
         {
           userAgent: "*",
