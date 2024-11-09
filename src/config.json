@@ -1,0 +1,50 @@
+{
+  "navbar": {
+    "title": "Example Name",
+    "links": {
+      "projects": {
+        "enabled": true
+      },
+      "blog": {
+        "enabled": true
+      }
+    }
+  },
+  "pages": {
+    "blog": {
+      "enabled": true
+    },
+    "projects": {
+      "enabled": true
+    }
+  },
+  "footer": {
+    "copyright": {
+      "fromYear": 2024,
+      "name": "Example Name"
+    },
+    "showSupportText": true,
+    "links": {
+      "github": {
+        "enabled": true,
+        "username": "example"
+      },
+      "gitlab": {
+        "enabled": true,
+        "username": "example"
+      },
+      "linkedin": {
+        "enabled": true,
+        "username": "example"
+      },
+      "twitter": {
+        "enabled": true,
+        "username": "example"
+      },
+      "email": {
+        "enabled": true,
+        "address": "example"
+      }
+    }
+  }
+}
