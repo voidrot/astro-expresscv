@@ -32,6 +32,8 @@ jobs:
         run: npm run format
 
       - name: Build
+        env:
+          ASTRO_SITE: "https://example.com"
         run: npm run build
 
       # - name: Archive production artifacts
